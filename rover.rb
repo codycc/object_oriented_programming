@@ -66,18 +66,46 @@ end
 
 def read_instruction
 curi = Rover.new(0,0,"N")
-puts "Please input your commands \"L\" TO TURN ROVER LEFT \"R\" AND M TO MOVE ROVER FORWARD "
-rover_commands = gets.chomp.upcase
- rover_commands.each_char do |char|
-   if char == "L" || char == "R"
-     curi.turn(char)
-   elsif char =="M"
-     curi.move
-   else
-     puts "ERROR"
+sami = Rover.new(0,0,"N")
+puts "Would you like to move rover curi or rover sami??"
+answer = gets.chomp.downcase
+
+  if answer == "curi"
+  puts "Please input your commands \"L\" TO TURN ROVER LEFT \"R\" AND M TO MOVE ROVER FORWARD "
+  rover_commands = gets.chomp.upcase
+   rover_commands.each_char do |char|
+     if char == "L" || char == "R"
+       curi.turn(char)
+
+     elsif char =="M"
+       curi.move
+     else
+       puts "ERROR"
+     end
    end
- end
-curi.position
+  curi.position
+
+
+  elsif answer =="sami"
+    puts "Please input your commands \"L\" TO TURN ROVER LEFT \"R\" AND M TO MOVE ROVER FORWARD "
+    rover_commands = gets.chomp.upcase
+     rover_commands.each_char do |char|
+       if char == "L" || char == "R"
+         sami.turn(char)
+
+       elsif char =="M"
+         sami.move
+       else
+         puts "ERROR"
+       end
+     end
+    sami.position
+
+
+end
+
+
+
 end
 
 read_instruction
