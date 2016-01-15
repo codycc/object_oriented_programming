@@ -71,7 +71,7 @@ puts "Would you like to move rover curi or rover sami??"
 answer = gets.chomp.downcase
 
   if answer == "curi"
-  puts "Please input your commands \"L\" TO TURN ROVER LEFT \"R\" AND M TO MOVE ROVER FORWARD "
+  puts "Please input your commands \"L\" TO TURN ROVER LEFT \"R\"TO TURN ROVER RIGHT AND M TO MOVE ROVER FORWARD "
   rover_commands = gets.chomp.upcase
    rover_commands.each_char do |char|
      if char == "L" || char == "R"
